@@ -1,0 +1,4 @@
+SELECT *  FROM `orders`
+JOIN users
+ON orders.user_id = users.id
+WHERE `user_id` != 7 AND `closed` = 0 AND orders.removed = 0 AND rz NOT LIKE "%test%" AND created > "2018-08-01 00:00:00" ORDER BY orders.id ASC
